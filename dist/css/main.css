@@ -123,14 +123,14 @@ h1 {
 
 @media (max-width: 505px) {
   .container .input-ip {
-    width: 350px;
+    width: 300px;
     margin: 0 20px; }
   .container input {
     padding-left: 10px; }
     .container input::placeholder {
       font-size: 0.8rem; }
   .card-results {
-    max-width: 450px; }
+    width: 300px; }
     .card-results .results {
       display: grid;
       grid-template-columns: repeat(1, 1fr);

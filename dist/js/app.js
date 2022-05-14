@@ -5,6 +5,14 @@ const formControl = document.querySelector('.form-control');
 
 map.makeMap();
 
+function getIpUser() {
+  ipGeolocation.getIpUser()
+  .then(result => getIpData(result.ip))
+  .catch(err => console.log(err));
+}
+
+getIpUser();
+
 function validateIPaddress(ipaddress) {  
   const ip = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
   const dn = /^(?![0-9]+$)(?!-)[a-zA-Z0-9%-]{,63}(?<!-)$/;
