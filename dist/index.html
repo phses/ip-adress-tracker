@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+  integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+  crossorigin=""/>
+  <title>IP Adress Tracker</title>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <h1>IP Address Tracker</h1>
+      <form class="form-control">
+        <div class="input-ip">
+          <input type="text" id="ip" placeholder="Search for any IP address or domain">
+          <button id="submit" type="submit"></button>
+        </div>
+      </form>
+      <div class="card-results hidden">
+        <ul class="results">
+          <li id="ip-address">
+          </li>
+          <li id="location">
+          </li>
+          <li id="timezone">
+          </li>
+          <li id="isp">
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="map"></div>
+  </main>
+  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+   integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+   crossorigin=""></script>
+  <script src="./js/map.js"></script>
+  <script src="./js/ip.js"></script>
+  <script src="./js/ui.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
